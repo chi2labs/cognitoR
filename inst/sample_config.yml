@@ -1,0 +1,9 @@
+default:
+  cognito:
+    group_name: "cognitoR"
+    oauth_flow: "code"
+    base_cognito_url: "https://cognitoR.auth.us-east-2.amazoncognito.com/"
+    app_client_id: ""
+    app_client_secret: ""
+    redirect_uri: "http://localhost"
+    redirect_uri_logout: "http://localhost?action=logout"

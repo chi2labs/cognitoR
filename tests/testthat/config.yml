@@ -1,0 +1,8 @@
+default:
+  cognito:
+    group_name: "your_group"
+    base_cognito_url: "https://yourclient.auth.us-east-2.amazoncognito.com/"
+    app_client_id: "your_client_id"
+    app_client_secret: "your_secret"
+    redirect_uri: "http://localhost"
+    redirect_uri_logout: "http://localhost"
