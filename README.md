@@ -9,6 +9,17 @@ CognitoR
 status](https://www.r-pkg.org/badges/version/cognitoR)](https://cran.r-project.org/package=cognitoR)
 <!-- badges: end -->
 
+## Credits
+
+<img src="man/figures/chi2labs.png" width=100 /><br>
+
+This package is developed and mantained by the
+<a href="https://www.chi2labs.com/">Chi2Labs</a> team.
+
+Inspired on an initial contribution done by
+<a href="https://adisarid.github.io/post/2019-08-10-cognito-shiny-authentication" target="_blank">Adi
+Sarid</a>.
+
 ## Disclaimer
 
 This package is not provided nor endorsed by Amazon. Use it at your own
@@ -27,13 +38,6 @@ Or from github with:
 ``` r
 devtools::install_github("chi2labs/cognitoR")
 ```
-
-## Inspiration
-
-This package was developed inspired on the contribution done by
-<a href="https://adisarid.github.io/" target="_blank">Adi Sarid</a> in
-<https://adisarid.github.io/post/2019-08-10-cognito-shiny-authentication/>
-.
 
 ## Requirements
 
@@ -120,13 +124,13 @@ Example:
 ``` yml
 default:
   cognito:
-    group_name: "cognitoRtest"
+    group_name: "YOUR_POOL_NAME"
     oauth_flow: "code"
-    base_cognito_url: "https://cognitor.auth.us-east-1.amazoncognito.com/"
+    base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com/"
     app_client_id: "YOUR_CLIENT_ID"
     app_client_secret: "YOUR_SECRET_ID"
-    redirect_uri: "http://localhost"
-    redirect_uri_logout: "http://localhost"
+    redirect_uri: "YOUR_APP_URL"
+    redirect_uri_logout: "YOUR_APP_URL"
 ```
 
 ### 6 - Add Support to your Shiny App
