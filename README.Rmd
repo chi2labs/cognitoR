@@ -54,6 +54,15 @@ You need to have:
 If you do not have experience with Amazon Cognito, It is recommended to read the official documentation:
 [Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html)
 
+## How it works ?
+
+When an user access to your Shiny application with CognitoR, the user is redirected to your configured url in Amazon Cognito, there if user is not logged will see the login page.
+
+If user is already logged or authentication is succesful in the login page, the user is redirected again to your Shiny App with a code/token (depending of your configuration) in the url. 
+
+The CognitoServer Module will communicate via OAUTH with Amazon Cognito. if application received a code will get a token via oauth (code can be used only once). 
+
+When application already have the token (via url or received with using the code) will check authorization with Amazon Cognito via OAUTH request using the token, if authorization is valid will load your Shiny application, otherwise user will be redirected again to login page.
 
 ## Steps 
 
