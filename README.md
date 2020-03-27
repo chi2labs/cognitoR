@@ -127,7 +127,8 @@ Your basic configuration in Amazon Cognito is ready.
 
 ### 5 - Configuration of your Shiny application with Amazon Cognito.
 
-You need to configure a config.yml with the following structure:
+This package require that you have a configuration file (“config.yml”)
+in your application folder with the following structure:
 
   - group\_name: The User Pool Name.
   - oauth\_flow: Flow configured,(“code” for Authorization code grant
@@ -162,8 +163,10 @@ The package has two main functions `cognito_ui()` and
 Cognito API. This method also returns reactive elements for:
 
   - Checking if user is logged in.
+  - Redirecting to Amazon Cognito Login Page configured if user is not
+    logged in.
   - Getting data for the authenticated user.
-  - Callback for Logout.
+  - Callback for Logout of Amazon Cognito.
 
 In the example mentioned above includes the suse of the Logout module
 (`logout_ui()` and `logout_server()`) which provide a “logout” button
