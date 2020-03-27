@@ -1,0 +1,76 @@
+---
+title: "Adding CognitoR authentication to your Shiny application"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{adding_to_your_app}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(cognitoR)
+```
+
+## Loading Cognito UI module
+
+```{r echo=TRUE, eval=FALSE}
+your_ui = function() {
+    fluidPage(
+              # Load UI logout
+              logout_ui("logout"),
+              # Load UI Cognito.
+              cognito_ui("cognito"),
+              # Output to show some content.
+              uiOutput("content"))
+}
+```
+
+## Loading Cognito Server Module
+
+```{r echo=TRUE, eval=FALSE}
+your_server = function(input, output, session) {
+
+    # Call Cognito module. ####
+    cognitomod <- callModule(cognito_server, "cognito")
+
+    # Call Logout module ####
+    logoutmod <- callModule(logout_server,
+                            "logout",
+                            reactive(cognitomod$isLogged),
+                            sprintf("You are logged in as '%s'", cognitomod$userdata$email))
+
+    # To Click on button logout of logout module, call logout in cognito module. ####
+    observeEvent(logoutmod(),{
+      cognitomod$logout()
+    })
+
+    # Check if user is already logged, and load your content. ####
+    observeEvent(cognitomod$isLogged, {
+      if (cognitomod$isLogged) {
+        # User is logged
+        userdata <- cognitomod$userdata
+        
+        output$content <- renderUI({
+          # Load your content here
+        })
+      }
+    })
+
+  }
+)
+```
+
+## Run Application
+```{r echo=TRUE, eval=FALSE}
+shinyApp(
+  ui = your_ui(),
+  server = your_server()
+)
+```
