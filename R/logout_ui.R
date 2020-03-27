@@ -1,4 +1,5 @@
-#' Logout UI
+#' Logout Shiny Module UI
+#'
 #' Return a UI with a logout button and information about user logged.
 #' By default is hidden and is show with reactive element from logoutServer
 #'

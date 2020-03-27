@@ -2,8 +2,7 @@
 % Please edit documentation in R/logout_server.R
 \name{logout_server}
 \alias{logout_server}
-\title{Logout Server
-Receive a reactive element (isLogged), when is TRUE the logout button and information about is shown.}
+\title{Logout Shiny Module Server}
 \usage{
 logout_server(
   input,
@@ -28,6 +27,5 @@ logout_server(
 reactive (the logout button)
 }
 \description{
-Logout Server
 Receive a reactive element (isLogged), when is TRUE the logout button and information about is shown.
 }

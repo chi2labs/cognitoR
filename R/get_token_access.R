@@ -1,4 +1,4 @@
-#' Get Cognito Tokens
+#' Get Cognito Tokens via oauth
 #'
 #' With code received via url, get tokens for user via oauth.
 #'

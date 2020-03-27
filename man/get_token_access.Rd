@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_token_access.R
 \name{get_token_access}
 \alias{get_token_access}
-\title{Get Cognito Tokens}
+\title{Get Cognito Tokens via oauth}
 \usage{
 get_token_access(code, cognito_config)
 }

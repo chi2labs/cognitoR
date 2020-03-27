@@ -2,7 +2,7 @@
 #'
 #' Return Url where user is redirect when is logout.
 #'
-#' @param cognito_config - List obtained with get_cognito_config()
+#' @param cognito_config list Obtained with get_cognito_config()
 #' @return character|FALSE
 #' @author Pablo Pagnone
 #' @export

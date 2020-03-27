@@ -2,7 +2,7 @@
 % Please edit documentation in R/cookie_ui.R
 \name{cookie_ui}
 \alias{cookie_ui}
-\title{Cookie UI}
+\title{Cookie Shiny Module UI}
 \usage{
 cookie_ui(id)
 }

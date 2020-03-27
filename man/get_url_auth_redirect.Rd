@@ -7,9 +7,9 @@
 get_url_auth_redirect(cognito_config, session = getDefaultReactiveDomain())
 }
 \arguments{
-\item{cognito_config}{- List obtained with get_cognito_config()}
+\item{cognito_config}{list Obtained with get_cognito_config()}
 
-\item{session}{- Shiny session - Will be used to keep the urls when redirection is done.}
+\item{session}{Shiny session Will be used to keep the params in urls when redirection is done.}
 }
 \value{
 character|FALSE

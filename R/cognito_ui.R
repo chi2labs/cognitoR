@@ -1,14 +1,14 @@
-#' Cognito UI
-#' Offer a authentication with Amazon Cognito
+#' Cognito Shiny Module UI
+#'
+#' Is a Shiny UI function to be used if you want to implement Amazon Cognito in your shiny app.
 #' This UI load the required JS.
 #'
 #' @param id character - Namespace ID
-#' @param logout_btn character - Text for Logout Button
-#' @param logout_btn_class character - Class for logout button
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
+#' @author Pablo Pagnone
 #' @export
-cognito_ui <- function(id, logout_btn = "Log out", logout_btn_class = "btn-danger btn-cognito-logout"){
+cognito_ui <- function(id){
   ns <- NS(id)
   jscode <- "Shiny.addCustomMessageHandler('redirect', function(url) { window.location = url;});"
   fluidRow(

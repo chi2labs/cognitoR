@@ -2,7 +2,7 @@
 % Please edit documentation in R/cognito_server.R
 \name{cognito_server}
 \alias{cognito_server}
-\title{Cognito Server}
+\title{Cognito Shiny Module Server}
 \usage{
 cognito_server(input, output, session)
 }
@@ -17,5 +17,8 @@ cognito_server(input, output, session)
 reactiveValues (isLogged and userdata) and callback function to do logout in Cognito.
 }
 \description{
-Return shiny server for Cognito Module.
+Is a shiny server function to implement Cognito Authentication in your shiny app.
+}
+\author{
+Pablo Pagnone
 }

@@ -2,25 +2,17 @@
 % Please edit documentation in R/cognito_ui.R
 \name{cognito_ui}
 \alias{cognito_ui}
-\title{Cognito UI
-Offer a authentication with Amazon Cognito
-This UI load the required JS.}
+\title{Cognito Shiny Module UI}
 \usage{
-cognito_ui(
-  id,
-  logout_btn = "Log out",
-  logout_btn_class = "btn-danger btn-cognito-logout"
-)
+cognito_ui(id)
 }
 \arguments{
 \item{id}{character - Namespace ID}
-
-\item{logout_btn}{character - Text for Logout Button}
-
-\item{logout_btn_class}{character - Class for logout button}
 }
 \description{
-Cognito UI
-Offer a authentication with Amazon Cognito
+Is a Shiny UI function to be used if you want to implement Amazon Cognito in your shiny app.
 This UI load the required JS.
+}
+\author{
+Pablo Pagnone
 }

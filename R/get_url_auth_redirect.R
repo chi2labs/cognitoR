@@ -2,8 +2,8 @@
 #'
 #' Return Url where user is redirect if is not logged yet.
 #'
-#' @param cognito_config - List obtained with get_cognito_config()
-#' @param session - Shiny session - Will be used to keep the urls when redirection is done.
+#' @param cognito_config list Obtained with get_cognito_config()
+#' @param session Shiny session Will be used to keep the params in urls when redirection is done.
 #' @return character|FALSE
 #' @author Pablo Pagnone
 #' @export

@@ -7,7 +7,7 @@
 get_url_logout_redirect(cognito_config)
 }
 \arguments{
-\item{cognito_config}{- List obtained with get_cognito_config()}
+\item{cognito_config}{list Obtained with get_cognito_config()}
 }
 \value{
 character|FALSE

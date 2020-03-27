@@ -1,7 +1,7 @@
 #' Get Cognito Information of user via oauth
 #'
-#' @param token You can obtain with get_cognito_token_access()
-#' @param cognito_config - List obtained with get_cognito_config()
+#' @param token string You can obtain with get_cognito_token_access()
+#' @param cognito_config list List obtained with get_cognito_config()
 #' @import config
 #' @import httr
 #' @return list|FALSE - If request is success return list with info about user. If configuration of token is invalid return FALSE.

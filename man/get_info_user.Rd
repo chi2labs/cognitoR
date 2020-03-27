@@ -7,9 +7,9 @@
 get_info_user(token, cognito_config)
 }
 \arguments{
-\item{token}{You can obtain with get_cognito_token_access()}
+\item{token}{string You can obtain with get_cognito_token_access()}
 
-\item{cognito_config}{- List obtained with get_cognito_config()}
+\item{cognito_config}{list List obtained with get_cognito_config()}
 }
 \value{
 list|FALSE - If request is success return list with info about user. If configuration of token is invalid return FALSE.

@@ -2,12 +2,7 @@
 % Please edit documentation in R/cookie_server.R
 \name{cookie_server}
 \alias{cookie_server}
-\title{Cookie Server
-This server module return a list with methods to interact with cookie created via JS.
-You have:
-getCookie - Reactive function, return the content of cookie if exist. Else return FALSE.
-setCookie - Allow to set the content for a cookie. (Required param: list())
-rmCookie - Allow to remove a cookie.}
+\title{Cookie Shiny Module Server}
 \usage{
 cookie_server(
   input,
@@ -32,10 +27,12 @@ cookie_server(
 list with reactive element and function to manage cookie
 }
 \description{
-Cookie Server
 This server module return a list with methods to interact with cookie created via JS.
 You have:
 getCookie - Reactive function, return the content of cookie if exist. Else return FALSE.
 setCookie - Allow to set the content for a cookie. (Required param: list())
 rmCookie - Allow to remove a cookie.
+}
+\author{
+Pablo Pagnone
 }
