@@ -4,6 +4,9 @@
 #'
 #' @param code character - Code Access received from Amazon Cognito
 #' @param cognito_config list - List obtained with get_cognito_config()
+#' @examples
+#' get_token_access('your-code', get_config())
+#'
 #' @import config
 #' @import httr
 #' @return list|FALSE
@@ -11,7 +14,8 @@
 #' @export
 get_token_access <- function(code, cognito_config) {
 
-  if(is.null(cognito_config$group_name) ||
+  if(!is.list(cognito_config) ||
+     is.null(cognito_config$group_name) ||
      is.null(cognito_config$base_cognito_url) ||
      is.null(cognito_config$app_client_id) ||
      is.null(cognito_config$app_client_secret) ||

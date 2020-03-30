@@ -12,6 +12,10 @@ list|FALSE
 \description{
 Return all required configuration from file .yml to connect with Amazon Cognito instance.
 }
+\examples{
+get_config()
+
+}
 \author{
 Pablo Pagnone
 }

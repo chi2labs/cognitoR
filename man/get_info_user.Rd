@@ -17,6 +17,10 @@ list|FALSE - If request is success return list with info about user. If configur
 \description{
 Get Cognito Information of user via oauth
 }
+\examples{
+get_info_user('your-token', get_config())
+
+}
 \author{
 Pablo Pagnone
 }
