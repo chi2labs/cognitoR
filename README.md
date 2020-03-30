@@ -7,6 +7,8 @@ CognitoR
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/cognitoR)](https://cran.r-project.org/package=cognitoR)
+[![Build
+Status](https://travis-ci.org/chi2labs/cognitoR.svg?branch=master)](https://travis-ci.org/chi2labs/cognitoR)
 <!-- badges: end -->
 
 ## Credits
@@ -61,14 +63,12 @@ If user is already logged or authentication is succesful in the login
 page, the user is redirected again to your Shiny App with a code/token
 (depending of your configuration) in the url.
 
-The CognitoServer Module will communicate via OAUTH with Amazon Cognito.
-if application received a code will get a token via oauth (code can be
-used only once).
-
-When application already have the token (via url or received with using
-the code) will check authorization with Amazon Cognito via OAUTH request
-using the token, if authorization is valid will load your Shiny
-application, otherwise user will be redirected again to login page.
+If application load receiving a code will get a token via oauth (code
+can be used only once). When application already have the token (via url
+or received using the code) will check authorization with Amazon Cognito
+via OAUTH request using the token, if authorization is valid will load
+your Shiny application, otherwise user will be redirected again to login
+page.
 
 ## Steps
 
