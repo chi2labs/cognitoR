@@ -1,7 +1,7 @@
 Package: cognitoR
 Type: Package
 Title: Authentication for 'Shiny' Apps with 'Amazon Cognito'
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: c(
     person("Pablo", "Pagnone", role = c("aut", "cre"), email = "pablodp84@gmail.com")
     )
