@@ -50,5 +50,5 @@ get_token_access <- function(code, cognito_config) {
     return(FALSE)
   }
 
-  return(tokens)
+  tokens
 }

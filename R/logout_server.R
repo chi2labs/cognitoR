@@ -32,5 +32,5 @@ logout_server <- function(input,
     }
   })
 
-  return(reactive(input$logout))
+  reactive(input$logout)
 }

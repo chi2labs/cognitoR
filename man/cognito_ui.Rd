@@ -9,9 +9,12 @@ cognito_ui(id)
 \arguments{
 \item{id}{character - Namespace ID}
 }
+\value{
+A Shiny UI
+}
 \description{
-Is a Shiny UI function to be used if you want to implement Amazon Cognito in your shiny app.
-This UI load the required JS.
+A Shiny UI function to be used to implement Amazon Cognito in your shiny app.
+This UI loads the required JS.
 }
 \author{
 Pablo Pagnone

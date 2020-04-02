@@ -18,7 +18,7 @@ Status](https://travis-ci.org/chi2labs/cognitoR.svg?branch=master)](https://trav
 This package is developed and mantained by the
 <a href="https://www.chi2labs.com/">Chi2Labs</a> team.
 
-Inspired on an initial contribution done by
+Inspired on an initial contribution by
 <a href="https://adisarid.github.io/post/2019-08-10-cognito-shiny-authentication" target="_blank">Adi
 Sarid</a>.
 
@@ -55,31 +55,31 @@ Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazo
 
 ## How it works ?
 
-When an user access to your Shiny application with CognitoR, the user is
-redirected to your configured url in Amazon Cognito, there if user is
-not logged will see the login page.
+When a user accesses to your Shiny application with CognitoR, the user
+is redirected to your configured url in Amazon Cognito, there if user is
+not logged in, a login page will appear.
 
-If user is already logged or authentication is succesful in the login
-page, the user is redirected again to your Shiny App with a code/token
-(depending of your configuration) in the url.
+If the user is already logged or successful authentication is
+accomplished , the user is redirected back to your Shiny App with a
+code/token (depending of your configuration) in the url.
 
-If application load receiving a code will get a token via oauth (code
-can be used only once). When application already have the token (via url
-or received using the code) will check authorization with Amazon Cognito
-via OAUTH request using the token, if authorization is valid will load
-your Shiny application, otherwise user will be redirected again to login
-page.
+If the app is loaded with a code will get a token via oauth (this code
+can be used only once). If the app already has the token (via url or
+received it using the code) it will check authorization with Amazon
+Cognito via an OAUTH request using the token. A valid authorization will
+allow the Shiny app lo load, the user will be redirected back to the
+login page.
 
 ## Steps
 
-### 1 - Going to Amazon Cognito
+### 1 - Go to Amazon Cognito
 
 Once you have logged with your Amazon AWS account, go to “Cognito”
 service and click on “Manage User Pools”.
 
 <img src="man/figures/cognito1.png" width=500 />
 
-### 2 - Creating a User Pool
+### 2 - Create a User Pool
 
 <img src="man/figures/cognito2.png" width=500 />
 
@@ -93,21 +93,21 @@ pool):
 <img src="man/figures/cognito4.png" width=500 />
 <img src="man/figures/cognito5.png" width=500 />
 
-This will generate the client id and the client secret (You will need to
-configure your shinyapp).
+This will generate the client id and the client secret you will need to
+configure your shinyapp.
 
 <img src="man/figures/cognito5b.png" width=500 />
 
 ### 3 -Configure your domain for your Login Form
 
-Go to App Integration -\> Domain Name, there you must to set the url for
-login form, you can use a Amazon subdomain or use your own domain.
+Go to App Integration -\> Domain Name, to set the url for login form,
+you can use a Amazon subdomain or use your own domain.
 
 <img src="man/figures/cognito6.png" width=500 />
 
 Also remember the url for your configuration.
 
-### 4 - Setting for Application
+### 4 - Settings for Application
 
 Go to App Integration -\> App Client Settings and you must:
 
@@ -127,7 +127,7 @@ Your basic configuration in Amazon Cognito is ready.
 
 ### 5 - Configuration of your Shiny application with Amazon Cognito.
 
-This package require that you have a configuration file (“config.yml”)
+This package requires that you have a configuration file (“config.yml”)
 in your application folder with the following structure:
 
   - group\_name: The User Pool Name.
@@ -155,7 +155,8 @@ default:
 
 ### 6 - Add Support to your Shiny App
 
-An example app can be found in “inst/examples/simple-login-app.R”.
+An example app can be found in
+[inst/examples/simple-login-app.R](https://github.com/chi2labs/cognitoR/blob/master/inst/examples/simple-login-app.R).
 
 The package has two main functions `cognito_ui()` and
 `cognito_server()`. `cognito_ui()` loads required UI for Cognito Module.
@@ -168,7 +169,7 @@ Cognito API. This method also returns reactive elements for:
   - Getting data for the authenticated user.
   - Callback for Logout of Amazon Cognito.
 
-In the example mentioned above includes the suse of the Logout module
+The example mentioned above includes the use of the Logout module
 (`logout_ui()` and `logout_server()`) which provide a “logout” button
 interacting with the reactive “isLogged” returned from Cognito Module to
 show the button and with the logout callback when button is pressed.
