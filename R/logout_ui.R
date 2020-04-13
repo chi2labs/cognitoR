@@ -6,6 +6,8 @@
 #' @param id character
 #' @param textbutton character
 #' @param classbutton character
+#' @examples
+#' logout_ui("test")
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @return Shiny UI

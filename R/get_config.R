@@ -1,15 +1,11 @@
 #' Get Cognito config from .yml
 #'
 #' Return all required configuration from file .yml to connect with Amazon Cognito instance.
-#' @examples
-#' get_config()
-#'
 #' @import config
 #' @return list|FALSE
 #' @author Pablo Pagnone
-#' @export
 get_config <- function() {
-  
+
   # Get configuration for Cognito Service.
   tryCatch({
     result <- config::get()$cognito
@@ -21,9 +17,9 @@ get_config <- function() {
                         "redirect_uri",
                         "redirect_uri_logout",
                         "app_client_secret")
-    
+
     missing_args <- setdiff(required_names, config_names)
-    
+
     if(length(missing_args) > 0 || isFALSE(result$oauth_flow %in% c("code", "token"))) {
       stop("Missing params in config")
     }
@@ -32,5 +28,5 @@ get_config <- function() {
   error = function(e) {
     return(FALSE)
   })
-  
+
 }

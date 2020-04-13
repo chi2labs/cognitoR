@@ -1,4 +1,5 @@
 library(cognitoR)
+options(shiny.port = 5000)
 shinyApp(
   ui = function() {
     fluidPage(

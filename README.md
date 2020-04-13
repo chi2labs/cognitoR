@@ -146,7 +146,7 @@ default:
   cognito:
     group_name: "YOUR_POOL_NAME"
     oauth_flow: "code"
-    base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com/"
+    base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com"
     app_client_id: "YOUR_CLIENT_ID"
     app_client_secret: "YOUR_SECRET_ID"
     redirect_uri: "YOUR_APP_URL"
@@ -184,3 +184,23 @@ account and log in.
 Upon successful authentication, you will be redirect to your app:
 
 <img src="man/figures/cognito9.png" width=500 />
+
+### 8 - Running example application
+
+The example app can be found in
+[inst/examples/simple-login-app.R](https://github.com/chi2labs/cognitoR/blob/master/inst/examples/simple-login-app.R).
+
+This app work with a config.yml configured to work with a Cognito
+instance of Chi2labs, this instance not allow to create user and is
+required that you run this shiny app using the port 5000 (because
+Cognito instance is configured to expect this port).
+
+``` r
+options(shiny.port = 5000)
+runApp('inst/examples/simple-login-app.R')
+```
+
+You can test the application with these credentials:
+
+  - user: “demo”  
+  - password: “password”
