@@ -1,10 +1,10 @@
-#' Get Cognito URL for Logout redirect.
-#'
-#' Return Url where user is redirect when is logout.
-#'
-#' @param cognito_config list Obtained with get_cognito_config()
-#' @return character|FALSE
-#' @author Pablo Pagnone
+# #' Get Cognito URL for Logout redirect.
+# #'
+# #' Return Url where user is redirect when is logout.
+# #'
+# #' @param cognito_config list Obtained with get_cognito_config()
+# #' @return character|FALSE
+# #' @author Pablo Pagnone
 get_url_logout_redirect <- function(cognito_config) {
 
   if(!is.list(cognito_config) ||

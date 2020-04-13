@@ -1,11 +1,11 @@
-#' Get Cognito Information of user via oauth
-#'
-#' @param token string You can obtain with get_cognito_token_access()
-#' @param cognito_config list List obtained with get_cognito_config()
-#' @import config
-#' @import httr
-#' @return list|FALSE - If request is success return list with info about user. If configuration of token is invalid return FALSE.
-#' @author Pablo Pagnone
+# #' Get Cognito Information of user via oauth
+# #'
+# #' @param token string You can obtain with get_cognito_token_access()
+# #' @param cognito_config list List obtained with get_cognito_config()
+# #' @import config
+# #' @import httr
+# #' @return list|FALSE - If request is success return list with info about user. If configuration of token is invalid return FALSE.
+# #' @author Pablo Pagnone
 get_info_user <- function(token, cognito_config) {
 
   if(!is.list(cognito_config) || is.null(cognito_config$base_cognito_url)) {
