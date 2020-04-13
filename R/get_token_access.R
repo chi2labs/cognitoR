@@ -30,7 +30,7 @@ get_token_access <- function(code, cognito_config) {
 
   endpoint_oauth <- oauth_endpoint(authorize = "authorize",
                             access = "token",
-                            base_url = paste0(cognito_config$base_cognito_url, "oauth2"))
+                            base_url = paste0(cognito_config$base_cognito_url, "/oauth2"))
 
   # Get All tokens
   failed_token <- FALSE

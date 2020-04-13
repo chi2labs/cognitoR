@@ -16,7 +16,7 @@ get_info_user <- function(token, cognito_config) {
     return(FALSE)
   }
 
-  request <- GET(url = paste0(cognito_config$base_cognito_url, "oauth2/userInfo"),
+  request <- GET(url = paste0(cognito_config$base_cognito_url, "/oauth2/userInfo"),
                   add_headers(Authorization = paste("Bearer", token)))
 
   userinfo <- content(request)

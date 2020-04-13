@@ -134,7 +134,7 @@ default:
   cognito:
     group_name: "YOUR_POOL_NAME"
     oauth_flow: "code"
-    base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com/"
+    base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com"
     app_client_id: "YOUR_CLIENT_ID"
     app_client_secret: "YOUR_SECRET_ID"
     redirect_uri: "YOUR_APP_URL"
