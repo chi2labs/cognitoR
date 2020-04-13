@@ -7,6 +7,7 @@
 #' * getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
 #' * setCookie - Sets the content for a cookie. (Required param: list())
 #' * rmCookie -  Removes a cookie
+#' @md
 #' @param input shiny input
 #' @param output shiny output
 #' @param session shiny session
