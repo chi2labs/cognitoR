@@ -7,6 +7,7 @@ Updates:
 - base_cognito_url in config must be set without final slash
 - Some edits to Documentation
 - Don't export internal functions
+- Add usable application with a a demo instance of Cognito.
 
 ## Version 1.0.0
 
