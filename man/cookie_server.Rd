@@ -24,14 +24,18 @@ cookie_server(
 \item{cookie_expire}{numeric - Expiration timeof cookie}
 }
 \value{
-list with reactive element and function to manage cookie
+list of reactive element and function to manage cookies
 }
 \description{
-This server module return a list with methods to interact with cookie created via JS.
+This server module returns a list with methods to interact with cookie created via JS.
 You have:
-getCookie - Reactive function, return the content of cookie if exist. Else return FALSE.
-setCookie - Allow to set the content for a cookie. (Required param: list())
-rmCookie - Allow to remove a cookie.
+}
+\details{
+\itemize{
+\item getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
+\item setCookie - Sets the content for a cookie. (Required param: list())
+\item rmCookie -  Removes a cookie
+}
 }
 \author{
 Pablo Pagnone

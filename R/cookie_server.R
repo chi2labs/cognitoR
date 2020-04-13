@@ -1,11 +1,13 @@
 #' Cookie Shiny Module Server
 #'
-#' This server module return a list with methods to interact with cookie created via JS.
-#' You have:
-#' getCookie - Reactive function, return the content of cookie if exist. Else return FALSE.
-#' setCookie - Allow to set the content for a cookie. (Required param: list())
-#' rmCookie - Allow to remove a cookie.
 #'
+#' This server module returns a list with methods to interact with cookie created via JS.
+#' You have:
+#' 
+#' * getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
+#' * setCookie - Sets the content for a cookie. (Required param: list())
+#' * rmCookie -  Removes a cookie
+#' @md
 #' @param input shiny input
 #' @param output shiny output
 #' @param session shiny session
@@ -16,7 +18,7 @@
 #' @import dplyr
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom base64enc base64encode base64decode
-#' @return list with reactive element and function to manage cookie
+#' @return list of reactive element and function to manage cookies
 #' @author Pablo Pagnone
 #' @export
 cookie_server <- function(input, output, session, cookie_name = "user", cookie_expire = 0.5){
@@ -60,6 +62,5 @@ cookie_server <- function(input, output, session, cookie_name = "user", cookie_e
       return(FALSE)
     }
   )
-
-  return(functions)
+  functions
 }

@@ -1,9 +1,10 @@
 #' Cognito Shiny Module UI
 #'
-#' Is a Shiny UI function to be used if you want to implement Amazon Cognito in your shiny app.
-#' This UI load the required JS.
+#' A Shiny UI function to be used to implement Amazon Cognito in your shiny app.
+#' This UI loads the required JS.
 #'
 #' @param id character - Namespace ID
+#' @return A Shiny UI
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @author Pablo Pagnone

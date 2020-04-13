@@ -14,10 +14,10 @@ cognito_server(input, output, session)
 \item{session}{- Shiny Session}
 }
 \value{
-reactiveValues (isLogged and userdata) and callback function to do logout in Cognito.
+reactiveValues (isLogged and userdata) and a callback function to do logout in Cognito.
 }
 \description{
-Is a shiny server function to implement Cognito Authentication in your shiny app.
+A shiny server function to implement Cognito Authentication in your shiny app.
 }
 \author{
 Pablo Pagnone

@@ -1,6 +1,6 @@
 #' Cognito Shiny Module Server
 #'
-#' Is a shiny server function to implement Cognito Authentication in your shiny app.
+#' A shiny server function to implement Cognito Authentication in your shiny app.
 #'
 #' @param input - Shiny input
 #' @param output - Shiny Output
@@ -8,7 +8,7 @@
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @import httr
-#' @return reactiveValues (isLogged and userdata) and callback function to do logout in Cognito.
+#' @return reactiveValues (isLogged and userdata) and a callback function to do logout in Cognito.
 #' @author Pablo Pagnone
 #' @export
 cognito_server <- function(input, output, session){
@@ -78,5 +78,5 @@ cognito_server <- function(input, output, session){
     }
   },priority = 100000)
 
-  return(return)
+  return
 }
