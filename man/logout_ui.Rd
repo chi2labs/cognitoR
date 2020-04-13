@@ -20,3 +20,6 @@ Shiny UI
 Return a UI with a logout button and information about user logged.
 By default is hidden and is show with reactive element from logoutServer
 }
+\examples{
+logout_ui("test")
+}

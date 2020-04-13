@@ -3,16 +3,17 @@
 #'
 #' This server module returns a list with methods to interact with cookie created via JS.
 #' You have:
-#' 
+#'
 #' * getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
 #' * setCookie - Sets the content for a cookie. (Required param: list())
 #' * rmCookie -  Removes a cookie
-#' @md
 #' @param input shiny input
 #' @param output shiny output
 #' @param session shiny session
 #' @param cookie_name character - Name of cookie to create
 #' @param cookie_expire numeric - Expiration timeof cookie
+#' @examples
+#' cookie_server(NULL,NULL,NULL)
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @import dplyr

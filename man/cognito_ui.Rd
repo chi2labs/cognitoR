@@ -16,6 +16,9 @@ A Shiny UI
 A Shiny UI function to be used to implement Amazon Cognito in your shiny app.
 This UI loads the required JS.
 }
+\examples{
+cognito_ui("demo")
+}
 \author{
 Pablo Pagnone
 }

@@ -3,6 +3,8 @@
 #' This UI module load the required js methods to create/remove/get cookie in browser.
 #'
 #' @param id character
+#' @examples
+#' cookie_ui("cookie")
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @return a Shiny UI

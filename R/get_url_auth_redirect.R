@@ -4,8 +4,6 @@
 #'
 #' @param cognito_config list Obtained with get_cognito_config()
 #' @param session Shiny session Will be used to keep the params in urls when redirection is done.
-#' @examples
-#' get_url_auth_redirect(get_config())
 #' @return character|FALSE
 #' @author Pablo Pagnone
 get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDomain()) {
