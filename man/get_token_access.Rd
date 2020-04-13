@@ -17,10 +17,6 @@ list|FALSE
 \description{
 With code received via url, get tokens for user via oauth.
 }
-\examples{
-get_token_access('your-code', get_config())
-
-}
 \author{
 Pablo Pagnone
 }

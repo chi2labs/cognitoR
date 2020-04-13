@@ -4,6 +4,8 @@
 #' This UI loads the required JS.
 #'
 #' @param id character - Namespace ID
+#' @examples
+#' cognito_ui("demo")
 #' @return A Shiny UI
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)

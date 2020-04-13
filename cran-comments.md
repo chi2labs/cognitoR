@@ -14,6 +14,7 @@
 
 This is a resubmission. In this version I have:
 
-* Correction to stable version 1.0.0
-
-* Remove incorrect configuration file.
+* Correction to stable version 1.0.1
+* Minor fixes listed on news.md
+* Some edits to Documentation
+* Add usable application with a a demo instance of Cognito.

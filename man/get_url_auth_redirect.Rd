@@ -17,9 +17,6 @@ character|FALSE
 \description{
 Return Url where user is redirect if is not logged yet.
 }
-\examples{
-get_url_auth_redirect(get_config())
-}
 \author{
 Pablo Pagnone
 }

@@ -15,3 +15,6 @@ a Shiny UI
 \description{
 This UI module load the required js methods to create/remove/get cookie in browser.
 }
+\examples{
+cookie_ui("cookie")
+}

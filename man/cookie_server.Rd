@@ -31,11 +31,12 @@ This server module returns a list with methods to interact with cookie created v
 You have:
 }
 \details{
-\itemize{
-\item getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
-\item setCookie - Sets the content for a cookie. (Required param: list())
-\item rmCookie -  Removes a cookie
+* getCookie - Reactive function, returns the content of cookie if exist. Else return FALSE.
+* setCookie - Sets the content for a cookie. (Required param: list())
+* rmCookie -  Removes a cookie
 }
+\examples{
+cookie_server(NULL,NULL,NULL)
 }
 \author{
 Pablo Pagnone

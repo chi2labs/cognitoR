@@ -29,3 +29,6 @@ reactive (the logout button)
 \description{
 Receive a reactive element (isLogged), when is TRUE the logout button and information about is shown.
 }
+\examples{
+logout_server(NULL, NULL, NULL)
+}
