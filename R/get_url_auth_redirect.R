@@ -8,7 +8,6 @@
 #' get_url_auth_redirect(get_config())
 #' @return character|FALSE
 #' @author Pablo Pagnone
-#' @export
 get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDomain()) {
 
   if(!is.list(cognito_config) ||
@@ -22,7 +21,7 @@ get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDo
   # Take params from url and encode for send to Cognito as param.
   # These params will be returned in "status" param from Cognitor redirection.
   params = ""
-  if(session[["clientData"]]$url_search != "") {
+  if(!is.null(session) && session[["clientData"]]$url_search != "") {
     params <- utils::URLencode(session[["clientData"]]$url_search, TRUE)
   }
 

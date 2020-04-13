@@ -11,7 +11,6 @@
 #' @import httr
 #' @return list|FALSE
 #' @author Pablo Pagnone
-#' @export
 get_token_access <- function(code, cognito_config) {
 
   if(!is.list(cognito_config) ||

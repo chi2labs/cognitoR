@@ -5,7 +5,6 @@
 #' @param cognito_config list Obtained with get_cognito_config()
 #' @return character|FALSE
 #' @author Pablo Pagnone
-#' @export
 get_url_logout_redirect <- function(cognito_config) {
 
   if(!is.list(cognito_config) ||
