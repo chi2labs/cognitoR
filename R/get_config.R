@@ -1,9 +1,9 @@
-#' Get Cognito config from .yml
-#'
-#' Return all required configuration from file .yml to connect with Amazon Cognito instance.
+# #' Get Cognito config from .yml
+# #'
+# #' Return all required configuration from file .yml to connect with Amazon Cognito instance.
 #' @import config
-#' @return list|FALSE
-#' @author Pablo Pagnone
+# #' @return list|FALSE
+# #' @author Pablo Pagnone
 get_config <- function() {
 
   # Get configuration for Cognito Service.

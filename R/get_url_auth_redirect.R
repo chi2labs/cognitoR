@@ -1,11 +1,11 @@
-#' Get Cognito URL for authentication redirect
-#'
-#' Return Url where user is redirect if is not logged yet.
-#'
-#' @param cognito_config list Obtained with get_cognito_config()
-#' @param session Shiny session Will be used to keep the params in urls when redirection is done.
-#' @return character|FALSE
-#' @author Pablo Pagnone
+# #' Get Cognito URL for authentication redirect
+# #'
+# #' Return Url where user is redirect if is not logged yet.
+# #'
+# #' @param cognito_config list Obtained with get_cognito_config()
+# #' @param session Shiny session Will be used to keep the params in urls when redirection is done.
+# #' @return character|FALSE
+# #' @author Pablo Pagnone
 get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDomain()) {
 
   if(!is.list(cognito_config) ||

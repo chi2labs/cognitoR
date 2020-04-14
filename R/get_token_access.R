@@ -1,13 +1,13 @@
-#' Get Cognito Tokens via oauth
-#'
-#' With code received via url, get tokens for user via oauth.
-#'
-#' @param code character - Code Access received from Amazon Cognito
-#' @param cognito_config list - List obtained with get_cognito_config()
+# #' Get Cognito Tokens via oauth
+# #'
+# #' With code received via url, get tokens for user via oauth.
+# #'
+# #' @param code character - Code Access received from Amazon Cognito
+# #' @param cognito_config list - List obtained with get_cognito_config()
 #' @import config
 #' @import httr
-#' @return list|FALSE
-#' @author Pablo Pagnone
+# #' @return list|FALSE
+# #' @author Pablo Pagnone
 get_token_access <- function(code, cognito_config) {
 
   if(!is.list(cognito_config) ||
