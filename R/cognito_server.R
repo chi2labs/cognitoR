@@ -5,13 +5,17 @@
 #' @param input - Shiny input
 #' @param output - Shiny Output
 #' @param session - Shiny Session
+#' @param with_cookie - Create a own cookie when is authenticated in Cognito.
+#' @param cookiename - name for cookie
+#' @param cookie_expire - Expiration time for cookie
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
 #' @import httr
+#' @importFrom utils URLdecode
 #' @return reactiveValues (isLogged and userdata) and a callback function to do logout in Cognito.
 #' @author Pablo Pagnone
 #' @export
-cognito_server <- function(input, output, session){
+cognito_server <- function(input, output, session, with_cookie = FALSE, cookiename = "cognitor", cookie_expire = 7){
 
   # Define params for Cognito Login ####
   cognito_config <- get_config()
@@ -19,15 +23,40 @@ cognito_server <- function(input, output, session){
     stop("Your configuration for Cognito Service is not correct.")
   }
 
+  if(with_cookie) {
+    # Cookie support enabled.
+    cookiemod <- callModule(cookie_server, "cookiemod", cookie_name = cookiename, cookie_expire = cookie_expire)
+  }
+
   # Reactive values that return this module. ####
   return <- reactiveValues(isLogged = FALSE,
                            userdata = FALSE,
                            # Logout callback.
                            logout = function(){
+                             if(with_cookie){
+                               # Remove cookie
+                               cookiemod$rmCookie()
+                             }
                              session$sendCustomMessage("redirect", get_url_logout_redirect(cognito_config))
                            })
 
+  observeEvent(return$isLogged, {
+    if(return$isLogged == TRUE) {
+      # Is logged, hide the cognitor loader.
+      runjs("document.getElementById('cognitor_loader').style.display = 'none';")
+    }
+  })
+
   observe({
+
+    if(with_cookie) {
+      existscookie <- cookiemod$getCookie()
+      req(!is.null(existscookie))
+      if(!isFALSE(existscookie)){
+        return$isLogged <- TRUE
+        return$userdata <- existscookie
+      }
+    }
 
     if(!return$isLogged) {
 
@@ -43,10 +72,15 @@ cognito_server <- function(input, output, session){
 
         # Recovery params url from Cognito redirection and remove token/code params.
         if(!is.null(query$state) && query$state != ""){
-          query_params <- query$state
+          query_params <- URLdecode(query$state)
         } else {
           query_params <- "?"
         }
+        if(!is.null(session$clientData$url_hash)){
+          # Keep the url_hash
+          query_params <- paste0(query_params, session$clientData$url_hash)
+        }
+
         session$updateQueryString(query_params, "push")
 
         token = query$`#access_token`
@@ -57,11 +91,15 @@ cognito_server <- function(input, output, session){
         }
 
         if(!is.null(token)) {
-
           # Get userdata from Amazon and save in cookie.
           userdata <- get_info_user(token, cognito_config)
           return$isLogged <- TRUE
           return$userdata <- userdata
+
+          if(with_cookie) {
+            # Create cookie
+            cookiemod$setCookie(userdata)
+          }
 
         } else {
 
@@ -71,12 +109,11 @@ cognito_server <- function(input, output, session){
         }
 
       } else {
-
         aws_auth_redirect <- get_url_auth_redirect(cognito_config)
         session$sendCustomMessage("redirect", aws_auth_redirect)
       }
     }
-  },priority = 100000)
+  }, priority = 100000)
 
   return
 }
