@@ -1,6 +1,7 @@
 default:
   cognito:
     group_name: "cognitoRdemo"
+    group_id: ""
     oauth_flow: "code"
     base_cognito_url: "https://chi2labsdemo.auth.us-east-1.amazoncognito.com"
     app_client_id: "4dok9o23j7kp5nu7qm85q2s14c"

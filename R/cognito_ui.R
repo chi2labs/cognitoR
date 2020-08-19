@@ -14,8 +14,12 @@
 cognito_ui <- function(id){
   ns <- NS(id)
   jscode <- "Shiny.addCustomMessageHandler('redirect', function(url) { window.location = url;});"
+  addResourcePath('cognitor', system.file('', package='cognitoR'))
   fluidRow(
     shinyjs::useShinyjs(),
-    tags$head(tags$script(jscode))
+    HTML('<div id="cognitor_loader"></div>'),
+    tags$link(rel = "stylesheet", type = "text/css", href = "cognitor/css/loader.css"),
+    tags$head(tags$script(jscode)),
+    cookie_ui(ns("cookiemod"))
   )
 }
