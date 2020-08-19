@@ -98,6 +98,7 @@ cognito_server <- function(input, output, session, with_cookie = FALSE, cookiena
 
           if(with_cookie) {
             # Create cookie
+            userdata$access_token <- NULL # Not save token in cookie.
             cookiemod$setCookie(userdata)
           }
 
