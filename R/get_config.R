@@ -11,6 +11,7 @@ get_config <- function() {
     result <- config::get()$cognito
     config_names <- names(unlist(result))
     required_names <- c("group_name",
+                        "group_id",
                         "oauth_flow",
                         "base_cognito_url",
                         "app_client_id",
