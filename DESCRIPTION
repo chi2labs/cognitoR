@@ -3,7 +3,8 @@ Type: Package
 Title: Authentication for 'Shiny' Apps with 'Amazon Cognito'
 Version: 1.0.2
 Authors@R: c(
-    person("Pablo", "Pagnone", role = c("aut", "cre"), email = "pablodp84@gmail.com")
+    person("Pablo", "Pagnone", role = c("aut", "cre"), email = "pablodp84@gmail.com"),
+    person("Aleksander", "Dietrichson", role = c("aut"), email = "dietrichson@gmail.com")
     )
 Description: Provides authentication for Shiny applications using 'Amazon Cognito' ( <https://aws.amazon.com/es/cognito/>).
 Imports: shiny, yaml, config, shinyjs, httr, dplyr, base64enc, jsonlite, paws

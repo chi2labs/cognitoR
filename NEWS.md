@@ -1,3 +1,16 @@
+## Version 1.0.2
+
+19 August 2020
+
+Updates:
+
+- Add spinner while is validating with AWS.
+- Option to allow persist data in a cookie.
+- New param "pool id" required.
+- Fix to keep the hashes in url when user is redirected to login in AWS.
+- Adding examples for implementation in shinyMobile application.
+- Adding example to add user in a pool using the paws package.
+
 ## Version 1.0.1
 
 13 April 2020
