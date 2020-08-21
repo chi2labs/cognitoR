@@ -81,7 +81,7 @@ cognito_server <- function(input, output, session, with_cookie = FALSE, cookiena
           query_params <- paste0(query_params, session$clientData$url_hash)
         }
 
-        session$updateQueryString(query_params, "push")
+        #session$updateQueryString(query_params, "push")
 
         token = query$`#access_token`
         if(!is.null(query$code)){
