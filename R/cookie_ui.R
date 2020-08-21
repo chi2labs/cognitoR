@@ -42,7 +42,7 @@ cookie_ui <-function(id){
                           cookietime = params[2];
                         }
                         Cookies.set(cookiename, cookiecontent, {expires: cookietime});
-                        Shiny.onInputChange("',ns("cookie"),'", params[1]);
+                        //Shiny.onInputChange("',ns("cookie"),'", params[1]);
                       }
                       shinyjs.rmCookie = function(params) {
                         cookiename = "user";
