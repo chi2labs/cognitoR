@@ -16,11 +16,12 @@ cookie_ui <-function(id){
   addResourcePath("cognitoR", system.file("", package = "cognitoR"))
   # Define JS functions to cookies manage ####
   jsCode <- paste0('shinyjs.getCookie = function(params) {
-                        //console.log("Returning cookie");
+
                         cookiename = "user";
                         if(typeof params[0] === "string"){
                           cookiename = params[0];
                         }
+
                         var my_cookie = Cookies.get(cookiename);
                         if(my_cookie == undefined) {
                           my_cookie = "";
@@ -28,7 +29,6 @@ cookie_ui <-function(id){
                         Shiny.onInputChange("',ns("cookie"),'", my_cookie);
                       }
                       shinyjs.setCookie = function(params) {
-                        //console.log("Set cookie");
                         cookiename = "user";
                         if(typeof params[0] === "string"){
                           cookiename = params[0];
@@ -45,7 +45,6 @@ cookie_ui <-function(id){
                         Shiny.onInputChange("',ns("cookie"),'", params[1]);
                       }
                       shinyjs.rmCookie = function(params) {
-                        //console.log("Removing cookie");
                         cookiename = "user";
                         if(typeof params[0] === "string"){
                           cookiename = params[0];

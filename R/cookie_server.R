@@ -23,7 +23,7 @@
 #' @return list of reactive element and function to manage cookies
 #' @author Pablo Pagnone
 #' @export
-cookie_server <- function(input, output, session, cookie_name = "user", cookie_expire = 0.5){
+cookie_server <- function(input, output, session, cookie_name = "user", cookie_expire = 7){
 
   # Return a reactive element (getCookie) and methods to remove/set cookie ####
   functions <- list(

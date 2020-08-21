@@ -120,6 +120,7 @@ Your basic configuration in Amazon Cognito is ready.
 
 This package requires that you have a configuration file ("config.yml") in your application folder with the following structure:
 
+- group_id: The ID Pool
 - group_name: The User Pool Name.
 - oauth_flow: Flow configured,("code" for Authorization code grant flow or "token" for Implicit grant)
 - base_cognito_url: Your domain url for Client App.
@@ -132,6 +133,7 @@ Example:
 ```yml
 default:
   cognito:
+    group_id: ""
     group_name: "YOUR_POOL_NAME"
     oauth_flow: "code"
     base_cognito_url: "https://your_domain.auth.us-east-1.amazoncognito.com"

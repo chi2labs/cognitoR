@@ -1,6 +1,7 @@
 default:
   cognito:
     group_name: "cognitoR"
+    group_id: ""
     oauth_flow: "code"
     base_cognito_url: "https://cognitoR.auth.us-east-2.amazoncognito.com"
     app_client_id: ""

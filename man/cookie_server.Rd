@@ -4,13 +4,7 @@
 \alias{cookie_server}
 \title{Cookie Shiny Module Server}
 \usage{
-cookie_server(
-  input,
-  output,
-  session,
-  cookie_name = "user",
-  cookie_expire = 0.5
-)
+cookie_server(input, output, session, cookie_name = "user", cookie_expire = 7)
 }
 \arguments{
 \item{input}{shiny input}

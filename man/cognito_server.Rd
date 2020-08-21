@@ -4,7 +4,14 @@
 \alias{cognito_server}
 \title{Cognito Shiny Module Server}
 \usage{
-cognito_server(input, output, session)
+cognito_server(
+  input,
+  output,
+  session,
+  with_cookie = FALSE,
+  cookiename = "cognitor",
+  cookie_expire = 7
+)
 }
 \arguments{
 \item{input}{- Shiny input}
@@ -12,6 +19,12 @@ cognito_server(input, output, session)
 \item{output}{- Shiny Output}
 
 \item{session}{- Shiny Session}
+
+\item{with_cookie}{- Create a own cookie when is authenticated in Cognito.}
+
+\item{cookiename}{- name for cookie}
+
+\item{cookie_expire}{- Expiration time for cookie}
 }
 \value{
 reactiveValues (isLogged and userdata) and a callback function to do logout in Cognito.

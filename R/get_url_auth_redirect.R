@@ -19,8 +19,17 @@ get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDo
   # Take params from url and encode for send to Cognito as param.
   # These params will be returned in "status" param from Cognitor redirection.
   params = ""
+
+  # params = ""
+  # if(!is.null(session) && !is.null(session[["clientData"]]$url_pathname) && session[["clientData"]]$url_pathname != "") {
+  #   params <- session[["clientData"]]$url_pathname
+  # }
+
   if(!is.null(session) && session[["clientData"]]$url_search != "") {
-    params <- utils::URLencode(session[["clientData"]]$url_search, TRUE)
+    params <- paste0(params, utils::URLencode(session[["clientData"]]$url_search, TRUE))
+  }
+  if(!is.null(session) && session[["clientData"]]$url_hash != "") {
+    params <- paste0(params, utils::URLencode(session[["clientData"]]$url_hash, TRUE))
   }
 
   aws_auth_redirect <- paste0(cognito_config$base_cognito_url,

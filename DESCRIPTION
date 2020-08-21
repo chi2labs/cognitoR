@@ -1,17 +1,18 @@
 Package: cognitoR
 Type: Package
 Title: Authentication for 'Shiny' Apps with 'Amazon Cognito'
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
-    person("Pablo", "Pagnone", role = c("aut", "cre"), email = "pablodp84@gmail.com")
+    person("Pablo", "Pagnone", role = c("aut", "cre"), email = "pablodp84@gmail.com"),
+    person("Aleksander", "Dietrichson", role = c("aut"), email = "dietrichson@gmail.com")
     )
 Description: Provides authentication for Shiny applications using 'Amazon Cognito' ( <https://aws.amazon.com/es/cognito/>).
-Imports: shiny, yaml, config, shinyjs, httr, dplyr, base64enc, jsonlite
+Imports: shiny, yaml, config, shinyjs, httr, dplyr, base64enc, jsonlite, paws
 License: GPL-3
 BugReports: https://github.com/chi2labs/cognitoR/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Suggests: 
     knitr,
     rmarkdown
