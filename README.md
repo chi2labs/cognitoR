@@ -19,7 +19,7 @@ This package is developed and mantained by the
 <a href="https://www.chi2labs.com/">Chi2Labs</a> team.
 
 Inspired on an initial contribution by
-<a href="https://adisarid.github.io/post/2019-08-10-cognito-shiny-authentication" target="_blank">Adi
+<a href="https://adisarid.github.io/post/2019-08-10-cognito-shiny-authentication/" target="_blank">Adi
 Sarid</a>.
 
 ## Disclaimer
