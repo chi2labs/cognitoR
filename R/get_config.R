@@ -9,7 +9,19 @@ get_config <- function() {
   # Get configuration for Cognito Service.
   tryCatch({
     result <- config::get()$cognito
-    config_names <- names(unlist(result))
+
+    validate_config(result)
+
+    result
+  },
+  error = function(e) {
+    return(FALSE)
+  })
+
+}
+
+validate_config <- function(config) {
+    config_names <- names(unlist(config))
     required_names <- c("group_name",
                         "group_id",
                         "oauth_flow",
@@ -20,14 +32,7 @@ get_config <- function() {
                         "app_client_secret")
 
     missing_args <- setdiff(required_names, config_names)
-
     if(length(missing_args) > 0 || isFALSE(result$oauth_flow %in% c("code", "token"))) {
       stop("Missing params in config")
     }
-    result
-  },
-  error = function(e) {
-    return(FALSE)
-  })
-
 }
