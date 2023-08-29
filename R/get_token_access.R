@@ -4,7 +4,7 @@
 # #'
 # #' @param code character - Code Access received from Amazon Cognito
 # #' @param cognito_config list - List obtained with get_cognito_config()
-#' @import config
+#' @importFrom config get
 #' @import httr
 # #' @return list|FALSE
 # #' @author Pablo Pagnone
