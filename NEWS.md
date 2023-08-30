@@ -1,3 +1,12 @@
+## Version 1.0.3
+
+30 August 2023
+
+Updates:
+
+- Separate config validate.
+- Resolve loading of config.
+
 ## Version 1.0.2
 
 19 August 2020
