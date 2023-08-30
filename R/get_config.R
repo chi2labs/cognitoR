@@ -33,7 +33,7 @@ validate_config <- function(config) {
                         "app_client_secret")
 
     missing_args <- setdiff(required_names, config_names)
-    if(length(missing_args) > 0 || isFALSE(result$oauth_flow %in% c("code", "token"))) {
+    if(length(missing_args) > 0 || isFALSE(config$oauth_flow %in% c("code", "token"))) {
       stop("Missing params in config")
     }
     return(TRUE)
