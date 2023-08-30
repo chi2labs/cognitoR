@@ -2,18 +2,18 @@
 # #'
 # #' Return all required configuration from file .yml to connect with Amazon Cognito instance.
 #' @importFrom config get
+#' @importFrom rlang .data
 # #' @return list|FALSE
 # #' @author Pablo Pagnone
 get_config <- function() {
-  result <- NULL
 
   # Get configuration for Cognito Service.
   tryCatch({
-    result <- config::get()$cognito
+    .data$result <- config::get()$cognito
 
-    validate_config(result)
+    validate_config(.data$result)
 
-    result
+    .data$result
   },
   error = function(e) {
     return(FALSE)
