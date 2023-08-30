@@ -5,6 +5,7 @@
 # #' @return list|FALSE
 # #' @author Pablo Pagnone
 get_config <- function() {
+  result <- NULL
 
   # Get configuration for Cognito Service.
   tryCatch({
@@ -35,4 +36,5 @@ validate_config <- function(config) {
     if(length(missing_args) > 0 || isFALSE(result$oauth_flow %in% c("code", "token"))) {
       stop("Missing params in config")
     }
+    return(TRUE)
 }

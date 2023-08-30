@@ -7,11 +7,10 @@ Authors@R: c(
     person("Aleksander", "Dietrichson", role = c("aut"), email = "dietrichson@gmail.com")
     )
 Description: Provides authentication for Shiny applications using 'Amazon Cognito' ( <https://aws.amazon.com/es/cognito/>).
-Imports: shiny, yaml, config, shinyjs, httr, dplyr, base64enc, jsonlite, paws
+Imports: shiny, config, shinyjs, httr, dplyr, base64enc, jsonlite, paws
 License: GPL-3
 BugReports: https://github.com/chi2labs/cognitoR/issues
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
     knitr,
