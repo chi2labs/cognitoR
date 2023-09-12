@@ -26,7 +26,7 @@
 #'                     DesiredDeliveryMediums = "EMAIL"
 #'                     )
 #' }
-#' @import paws
+#' @importFrom paws cognitoidentityprovider
 #' @export
 cognito_add_account <- function(cognito_config, Username, UserAttributes, DesiredDeliveryMediums, ...){
 
