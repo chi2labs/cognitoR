@@ -3,7 +3,7 @@
 # #' @param token string You can obtain with get_cognito_token_access()
 # #' @param cognito_config list List obtained with get_cognito_config()
 #' @importFrom config get
-#' @importFrom httr GET add_headers
+#' @importFrom httr GET add_headers content
 # #' @return list|FALSE - If request is success return list with info about user. If configuration of token is invalid return FALSE.
 # #' @author Pablo Pagnone
 get_info_user <- function(token, cognito_config) {

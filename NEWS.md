@@ -1,3 +1,11 @@
+## Version 1.0.4
+
+12 September 2023
+
+Updates:
+
+- Explicitly import httr and paws functions to avoid conflicts.
+
 ## Version 1.0.3
 
 30 August 2023
