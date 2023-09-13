@@ -5,7 +5,7 @@
 # #' @param code character - Code Access received from Amazon Cognito
 # #' @param cognito_config list - List obtained with get_cognito_config()
 #' @importFrom config get
-#' @import httr
+#' @importFrom httr oauth_app oauth_endpoint oauth2.0_access_token
 # #' @return list|FALSE
 # #' @author Pablo Pagnone
 get_token_access <- function(code, cognito_config) {

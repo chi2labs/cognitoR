@@ -10,7 +10,6 @@
 #' @param cookie_expire - Expiration time for cookie
 #' @import shiny
 #' @rawNamespace import(shinyjs, except = runExample)
-#' @import httr
 #' @importFrom utils URLdecode
 #' @return reactiveValues (isLogged and userdata) and a callback function to do logout in Cognito.
 #' @author Pablo Pagnone
