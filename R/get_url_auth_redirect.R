@@ -33,7 +33,7 @@ get_url_auth_redirect <- function(cognito_config, session = getDefaultReactiveDo
   }
 
   aws_auth_redirect <- paste0(cognito_config$base_cognito_url,
-                              "/oauth2/authorize?",
+                              "/oauth2/authorize?", "scope=openid", "&",
                               "response_type=",cognito_config$oauth_flow,"&",
                               "client_id=", cognito_config$app_client_id, "&",
                               "redirect_uri=", cognito_config$redirect_uri, "&",
